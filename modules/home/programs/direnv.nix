@@ -5,7 +5,7 @@
       enable = true;
 
       # reduce verbosity.
-      config.global.log_filter = "^loading";
+      config.global.hide_env_diff = true;
       config.global.warn_timeout = "0s";
 
       # enable nix-direnv for performance.
