@@ -1,14 +1,18 @@
 {lib, ...}: {
   flake.modules.homeManager.violetshine = {pkgs, ...}: let
-    mkPrograms = modules:
+    mkEnable = modules:
       lib.pipe modules [
         (lib.map (m: {"${m}".enable = true;}))
         (lib.foldr lib.mergeAttrs {})
       ];
   in {
-    programs = mkPrograms [
+    programs = mkEnable [
       "home-manager"
       "zoxide"
+    ];
+
+    services = mkEnable [
+      "ssh-agent"
     ];
 
     home.packages = with pkgs; [
