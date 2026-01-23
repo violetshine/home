@@ -13,7 +13,9 @@
 
     home.packages = with pkgs; [
       just
+      nh
       nil
+      nix-output-monitor
       typst
     ];
   };
