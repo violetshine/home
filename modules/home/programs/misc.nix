@@ -2,7 +2,9 @@
   flake.modules.homeManager.violetshine = {pkgs, ...}: let
     mkEnable = modules:
       lib.pipe modules [
-        (lib.map (m: {"${m}".enable = true;}))
+        (lib.map (m: {
+          "${m}".enable = true;
+        }))
         (lib.foldr lib.mergeAttrs {})
       ];
   in {
@@ -21,6 +23,7 @@
       nil
       nix-output-monitor
       typst
+      texliveFull
     ];
   };
 }
