@@ -7,3 +7,5 @@
 # nix
 /result
 /result-*
+
+.DS_Store
