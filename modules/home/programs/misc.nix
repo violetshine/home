@@ -23,7 +23,6 @@
       nil
       nix-output-monitor
       typst
-      texliveFull
     ];
   };
 }
