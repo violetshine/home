@@ -23,6 +23,9 @@
       nil
       nix-output-monitor
       typst
+
+      ripgrep # Recursively search files for a regex pattern
+      fd # Better alternative to the standard 'find' command
     ];
   };
 }
