@@ -12,6 +12,7 @@
       extensions = [
         "nix" # Adds Nix language support
         "typst" # Adds support for the Typst markup language
+        "toml" # Adds support for TOML config files
       ];
 
       # We don't want Zed to update the user settings file since the settings should be managed from here.
