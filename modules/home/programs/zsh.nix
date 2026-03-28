@@ -14,8 +14,14 @@
           export NVM_DIR="''${HOME}/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
         '';
+        zshConfigLastToRun = lib.mkOrder 1500 ''
+          export EDITOR="zeditor"
+        '';
       in
-        lib.mkMerge [zshConfig];
+        lib.mkMerge [
+          zshConfig
+          zshConfigLastToRun
+        ];
     };
   };
 }
