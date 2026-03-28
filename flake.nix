@@ -13,14 +13,13 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = {
-    flake-parts,
-    import-tree,
-    ...
-  } @ inputs:
-    flake-parts.lib.mkFlake
-    {inherit inputs;}
-    (import-tree [
+  outputs =
+    {
+      flake-parts,
+      import-tree,
+      ...
+    }@inputs:
+    flake-parts.lib.mkFlake { inherit inputs; } (import-tree [
       ./modules
     ]);
 }

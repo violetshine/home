@@ -1,4 +1,5 @@
-{lib, ...}: {
+{ lib, ... }:
+{
   flake.modules.homeManager.violetshine = {
     programs.zsh = {
       enable = true;
@@ -9,15 +10,16 @@
         "prompt_subst"
       ];
 
-      initContent = let
-        zshConfig = lib.mkOrder 1000 ''
-          export NVM_DIR="''${HOME}/.nvm"
-          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-        '';
-        zshConfigLastToRun = lib.mkOrder 1500 ''
-          export EDITOR="zeditor"
-        '';
-      in
+      initContent =
+        let
+          zshConfig = lib.mkOrder 1000 ''
+            export NVM_DIR="''${HOME}/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+          '';
+          zshConfigLastToRun = lib.mkOrder 1500 ''
+            export EDITOR="zeditor"
+          '';
+        in
         lib.mkMerge [
           zshConfig
           zshConfigLastToRun

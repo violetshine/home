@@ -1,4 +1,5 @@
-{inputs, ...}: {
+{ inputs, ... }:
+{
   imports = with inputs; [
     flake-parts.flakeModules.modules
     git-hooks.flakeModule

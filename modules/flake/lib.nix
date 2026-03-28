@@ -2,7 +2,8 @@
   self,
   inputs,
   ...
-}: {
+}:
+{
   flake.lib = {
     # supported systems.
     systems = [
@@ -10,13 +11,12 @@
     ];
 
     # make a nixpkgs instance for a given system.
-    pkgsFor = system:
+    pkgsFor =
+      system:
       import inputs.nixpkgs {
         inherit system;
 
-        overlays =
-          builtins.attrValues
-          self.overlays;
+        overlays = builtins.attrValues self.overlays;
 
         config.allowUnfree = true;
       };

@@ -1,3 +1,4 @@
-{self, ...}: {
+{ self, ... }:
+{
   inherit (self.lib) systems;
 }
