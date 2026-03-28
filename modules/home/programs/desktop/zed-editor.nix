@@ -32,6 +32,9 @@
         # Do not use hard tabs for indentation.
         hard_tabs = false;
 
+        # Indent using two spaces.
+        tab_size = 2;
+
         # This is fairly obvious - helps with readability.
         colorize_brackets = true;
 
