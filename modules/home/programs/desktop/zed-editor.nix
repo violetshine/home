@@ -13,6 +13,8 @@
         "nix" # Adds Nix language support
         "typst" # Adds support for the Typst markup language
         "toml" # Adds support for TOML config files
+        "astro" # Support for Astro
+        "svelte" # ... and Svelte for web dev
       ];
 
       # We don't want Zed to update the user settings file since the settings should be managed from here.
@@ -57,6 +59,39 @@
 
             # Format Nix files on save.
             format_on_save = "on";
+          };
+
+          # https://zed.dev/docs/languages/tailwindcss#using-tailwind-css-mode-in-css-files
+          "CSS" = {
+            language_servers = [
+              "tailwindcss-intellisense-css"
+              "!vscode-css-language-server"
+            ];
+          };
+        };
+
+        # Configure LSPs
+        lsp = {
+          tailwindcss-language-server = {
+            settings = {
+              classFunctions = [ "cn" ];
+              # Make Astro and Svelte work with the Tailwind CSS LSP
+              includeLanguages = {
+                astro = "html";
+                svelte = "html";
+              };
+              experimental = {
+                classRegex = [
+                  "class=\"([^\"]*)\""
+                  "class='([^']*)'"
+                  "class:\\s*([^\\s{]+)"
+                  "class:list=\"{([^}]*)}\""
+                  "class:list='{([^}]*)}'"
+                  "\\{\\s*class:\\s*\"([^\"]*)\""
+                  "\\{\\s*class:\\s*'([^']*)'"
+                ];
+              };
+            };
           };
         };
       };
