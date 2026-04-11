@@ -40,6 +40,13 @@
         # This is fairly obvious - helps with readability.
         colorize_brackets = true;
 
+        # Wrap guides (vertical rulers) to help with code formatting
+        show_wrap_guides = true;
+        wrap_guides = [
+          80
+          100
+        ];
+
         # Language-specific options.
         languages = {
           # Configure Nix to use the tools that are installed by programs/lang/nix.nix.
