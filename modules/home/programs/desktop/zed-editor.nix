@@ -13,8 +13,9 @@
         "nix" # Adds Nix language support
         "typst" # Adds support for the Typst markup language
         "toml" # Adds support for TOML config files
-        "astro" # Support for Astro
-        "svelte" # ... and Svelte for web dev
+        "astro" # Support for Astro,
+        "deno" # Deno,
+        "svelte" # and Svelte for web dev
       ];
 
       # We don't want Zed to update the user settings file since the settings should be managed from here.
