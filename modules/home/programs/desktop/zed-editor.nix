@@ -12,6 +12,7 @@
       extensions = [
         "nix" # Adds Nix language support
         "typst" # Adds support for the Typst markup language
+        "latex" # Adds support for LaTeX through texlab (in lang/latex.nix)
         "toml" # Adds support for TOML config files
         "astro" # Support for Astro,
         "deno" # Deno,
@@ -41,7 +42,7 @@
         # This is fairly obvious - helps with readability.
         colorize_brackets = true;
 
-        # Wrap guides (vertical rulers) to help with code formatting
+        # Wrap guides (vertical rulers) to help with code formatting.
         show_wrap_guides = true;
         wrap_guides = [
           80
@@ -83,7 +84,7 @@
           tailwindcss-language-server = {
             settings = {
               classFunctions = [ "cn" ];
-              # Make Astro and Svelte work with the Tailwind CSS LSP
+              # Make Astro and Svelte work with the Tailwind CSS LSP.
               includeLanguages = {
                 astro = "html";
                 svelte = "html";
