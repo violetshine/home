@@ -77,6 +77,11 @@
               "!vscode-css-language-server"
             ];
           };
+
+          "Typst" = {
+            preferred_line_length = 120;
+            soft_wrap = "preferred_line_length";
+          };
         };
 
         # Configure LSPs
