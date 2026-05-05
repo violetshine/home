@@ -12,7 +12,6 @@
       extensions = [
         "nix" # Adds Nix language support
         "typst" # Adds support for the Typst markup language
-        "latex" # Adds support for LaTeX through texlab (in lang/latex.nix)
         "toml" # Adds support for TOML config files
         "astro" # Support for Astro,
         "deno" # Deno,
