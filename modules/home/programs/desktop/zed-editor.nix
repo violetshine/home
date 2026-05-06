@@ -12,6 +12,7 @@
       extensions = [
         "nix" # Adds Nix language support
         "typst" # Adds support for the Typst markup language
+        "haskell" # Haskell support
         "toml" # Adds support for TOML config files
         "astro" # Support for Astro,
         "deno" # Deno,
