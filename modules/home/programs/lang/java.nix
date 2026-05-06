@@ -1,0 +1,11 @@
+{
+  # Java JDK
+  flake.modules.homeManager.violetshine =
+    { pkgs, ... }:
+    {
+      programs.java = {
+        enable = true;
+        package = pkgs.temurin-bin-25;
+      };
+    };
+}
