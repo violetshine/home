@@ -12,6 +12,7 @@
       extensions = [
         "nix" # Adds Nix language support
         "typst" # Adds support for the Typst markup language
+        "kotlin" # Kotlin support
         "haskell" # Haskell support
         "toml" # Adds support for TOML config files
         "astro" # Support for Astro,
@@ -49,6 +50,8 @@
           100
         ];
 
+        project_panel.dock = "left";
+
         # Language-specific options.
         languages = {
           # Configure Nix to use the tools that are installed by programs/lang/nix.nix.
@@ -70,6 +73,12 @@
             format_on_save = "on";
           };
 
+          "Kotlin" = {
+            language_servers = [
+              "kotlin-lsp" # The official Kotlin LSP
+            ];
+          };
+
           # https://zed.dev/docs/languages/tailwindcss#using-tailwind-css-mode-in-css-files
           "CSS" = {
             language_servers = [
@@ -86,6 +95,16 @@
 
         # Configure LSPs
         lsp = {
+          kotlin-language-server = {
+            settings = {
+              compiler = {
+                jvm = {
+                  target = "25"; # JDK 25 (should match lang/java.nix)
+                };
+              };
+            };
+          };
+
           tailwindcss-language-server = {
             settings = {
               classFunctions = [ "cn" ];
