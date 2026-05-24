@@ -15,6 +15,8 @@
             enableExtensionUpdateCheck = false;
 
             extensions = [
+              # Claude Code AI
+              pkgs.vscode-extensions.anthropic.claude-code
               # Automatically loads .envrc
               pkgs.vscode-extensions.mkhl.direnv
               # Nix support
