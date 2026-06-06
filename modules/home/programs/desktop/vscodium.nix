@@ -52,6 +52,9 @@
               "[nix]" = {
                 "editor.formatOnSave" = true;
               };
+
+              # Git
+              "git.confirmSync" = false;
             };
           };
         };
