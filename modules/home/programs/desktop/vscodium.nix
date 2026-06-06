@@ -25,6 +25,8 @@
               pkgs.vscode-extensions.myriad-dreamin.tinymist
               # Rust
               pkgs.vscode-extensions.rust-lang.rust-analyzer
+              # Svelte web framework support
+              pkgs.vscode-extensions.svelte.svelte-vscode
               # Scala syntax highligting & LSP
               pkgs.vscode-extensions.scala-lang.scala
               pkgs.vscode-extensions.scalameta.metals
