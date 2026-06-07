@@ -15,23 +15,27 @@
             enableExtensionUpdateCheck = false;
 
             extensions = [
-              # Claude Code AI
-              pkgs.vscode-extensions.anthropic.claude-code
               # Automatically loads .envrc
               pkgs.vscode-extensions.mkhl.direnv
               # Nix support
               pkgs.vscode-extensions.jnoortheen.nix-ide
               # Tinymist - language server for Typst
               pkgs.vscode-extensions.myriad-dreamin.tinymist
-              # Rust
-              pkgs.vscode-extensions.rust-lang.rust-analyzer
               # Deno
               pkgs.vscode-extensions.denoland.vscode-deno
               # Svelte web framework support
               pkgs.vscode-extensions.svelte.svelte-vscode
+              # Other web dev extensions
+              pkgs.vscode-extensions.esbenp.prettier-vscode # Prettier
+              pkgs.vscode-extensions.dbaeumer.vscode-eslint # ESlint
+              pkgs.vscode-extensions.bradlc.vscode-tailwindcss # Tailwind CSS
+              # Rust
+              pkgs.vscode-extensions.rust-lang.rust-analyzer
               # Scala syntax highligting & LSP
               pkgs.vscode-extensions.scala-lang.scala
               pkgs.vscode-extensions.scalameta.metals
+              # Claude Code AI
+              pkgs.vscode-extensions.anthropic.claude-code
             ];
 
             userSettings = {
@@ -55,6 +59,9 @@
 
               # Git
               "git.confirmSync" = false;
+
+              # Svelte
+              "svelte.enable-ts-plugin" = true;
             };
           };
         };
