@@ -31,6 +31,8 @@
               pkgs.vscode-extensions.bradlc.vscode-tailwindcss # Tailwind CSS
               # Rust
               pkgs.vscode-extensions.rust-lang.rust-analyzer
+              # C#
+              pkgs.vscode-extensions.ms-dotnettools.csharp
               # Scala syntax highligting & LSP
               pkgs.vscode-extensions.scala-lang.scala
               pkgs.vscode-extensions.scalameta.metals
@@ -49,6 +51,8 @@
               "editor.fontWeight" = "normal";
               "editor.fontLigatures" = true;
               "editor.fontSize" = 14;
+
+              "explorer.confirmDelete" = false;
 
               # Nix language
               "nix.enableLanguageServer" = true;
