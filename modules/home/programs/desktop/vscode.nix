@@ -1,13 +1,13 @@
 {
-  # VSCodium - a FOSS build of VS Code without Microsoft telemetry
+  # VS Code
   flake.modules.homeManager.violetshine =
     { pkgs, ... }:
     {
-      programs.vscodium = {
+      programs.vscode = {
         enable = true;
 
-        # The VS Code package to use (VSCodium)
-        package = pkgs.vscodium;
+        # The VS Code package to use
+        package = pkgs.vscode;
 
         profiles = {
           default = {
