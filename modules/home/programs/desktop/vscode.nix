@@ -14,30 +14,28 @@
             enableUpdateCheck = false;
             enableExtensionUpdateCheck = false;
 
-            extensions = [
+            extensions = with pkgs; [
               # Automatically loads .envrc
-              pkgs.vscode-extensions.mkhl.direnv
+              vscode-extensions.mkhl.direnv
               # Nix support
-              pkgs.vscode-extensions.jnoortheen.nix-ide
+              vscode-extensions.jnoortheen.nix-ide
               # Tinymist - language server for Typst
-              pkgs.vscode-extensions.myriad-dreamin.tinymist
+              vscode-extensions.myriad-dreamin.tinymist
+              # Java
+              vscode-extensions.vscjava.vscode-java-pack
               # Deno
-              pkgs.vscode-extensions.denoland.vscode-deno
+              vscode-extensions.denoland.vscode-deno
               # Svelte web framework support
-              pkgs.vscode-extensions.svelte.svelte-vscode
+              vscode-extensions.svelte.svelte-vscode
               # Other web dev extensions
-              pkgs.vscode-extensions.esbenp.prettier-vscode # Prettier
-              pkgs.vscode-extensions.dbaeumer.vscode-eslint # ESlint
-              pkgs.vscode-extensions.bradlc.vscode-tailwindcss # Tailwind CSS
+              vscode-extensions.esbenp.prettier-vscode # Prettier
+              vscode-extensions.dbaeumer.vscode-eslint # ESlint
+              vscode-extensions.bradlc.vscode-tailwindcss # Tailwind CSS
               # Rust
-              pkgs.vscode-extensions.rust-lang.rust-analyzer
-              # C#
-              pkgs.vscode-extensions.ms-dotnettools.csharp
+              vscode-extensions.rust-lang.rust-analyzer
               # Scala syntax highligting & LSP
-              pkgs.vscode-extensions.scala-lang.scala
-              pkgs.vscode-extensions.scalameta.metals
-              # Claude Code AI
-              pkgs.vscode-extensions.anthropic.claude-code
+              vscode-extensions.scala-lang.scala
+              vscode-extensions.scalameta.metals
             ];
 
             userSettings = {
@@ -53,6 +51,7 @@
               "editor.fontSize" = 14;
 
               "explorer.confirmDelete" = false;
+              "explorer.confirmDragAndDrop" = false;
 
               # Nix language
               "nix.enableLanguageServer" = true;
