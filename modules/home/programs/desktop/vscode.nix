@@ -23,6 +23,7 @@
               vscode-extensions.myriad-dreamin.tinymist
               # Java
               vscode-extensions.vscjava.vscode-java-pack
+              vscode-extensions.vscjava.vscode-gradle
               # Deno
               vscode-extensions.denoland.vscode-deno
               # Svelte web framework support
