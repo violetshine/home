@@ -27,6 +27,7 @@
         nh
         nil
         nix-output-monitor
+        google-cloud-sdk
       ];
     };
 }
