@@ -28,6 +28,7 @@
         nil
         nix-output-monitor
         google-cloud-sdk
+        firebase-tools
       ];
     };
 }
