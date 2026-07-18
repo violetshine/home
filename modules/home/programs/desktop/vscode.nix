@@ -34,6 +34,8 @@
               vscode-extensions.bradlc.vscode-tailwindcss # Tailwind CSS
               # Rust
               vscode-extensions.rust-lang.rust-analyzer
+              # Haskell
+              vscode-extensions.haskell.haskell
               # Scala syntax highligting & LSP
               vscode-extensions.scala-lang.scala
               vscode-extensions.scalameta.metals
